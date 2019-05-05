@@ -1,0 +1,16 @@
+{
+  "name": "@poker-client/leaderboard",
+  "version": "1.0.0",
+  "description": "The leaderboard component",
+  "author": "Lucas Rudd",
+  "private": true,
+  "dependencies": {
+    "@types/react": "^16.8.15",
+    "axios": "^0.18.0",
+    "country-data": "^0.0.31",
+    "react": "16.8.6",
+    "react-country-flag": "^1.0.2",
+    "recompose": "^0.30.0",
+    "styled-components": "^4.2.0"
+  }
+}
