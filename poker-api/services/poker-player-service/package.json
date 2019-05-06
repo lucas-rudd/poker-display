@@ -1,0 +1,47 @@
+{
+  "name": "@poker-api/poker-player-service",
+  "version": "1.0.0",
+  "description": "A service for gathering leaderboard information",
+  "author": "Lucas Rudd",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "typecheck": "$(yarn bin)/tsc --noEmit",
+    "test": "nyc --cache mocha --colors",
+    "lint": "tslint --project . --format stylish"
+  },
+  "dependencies": {
+    "@poker-api/base-handlers": "*",
+    "@poker-api/container": "*",
+    "@types/aws-lambda": "8.10.25",
+    "@types/mongoose": "5.3.27",
+    "aws-lambda": "0.1.2",
+    "convict": "4.4.1",
+    "inversify": "4.11.1",
+    "mongoose": "5.5.5",
+    "reflect-metadata": "0.1.13"
+  },
+  "devDependencies": {
+    "@poker-api-utils/test-utils": "*",
+    "@poker-api-utils/webpack": "*",
+    "@types/bluebird": "^3.5.26",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^12.0.0",
+    "bluebird": "^3.5.4",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.1.4",
+    "typescript": "2.8.4"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "exclude": [
+      "**/index.ts",
+      "**/*.test.ts"
+    ]
+  }
+}

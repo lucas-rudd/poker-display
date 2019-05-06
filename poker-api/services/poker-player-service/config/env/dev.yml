@@ -1,0 +1,10 @@
+tableName: poker-players-dev
+vpc:
+  securityGroupIds:
+    - sg-82a30cf2
+  subnetIds:
+    - subnet-c508318d
+    - subnet-319fda3d
+    - subnet-f95b1fd5
+    - subnet-71f9852b
+    - subnet-e51cf9da

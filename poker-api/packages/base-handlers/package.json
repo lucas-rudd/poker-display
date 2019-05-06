@@ -1,0 +1,11 @@
+{
+  "name": "@poker-api/base-handlers",
+  "version": "1.0.0",
+  "description": "A package for base-handlers for rest, sns, etc",
+  "author": "Lucas Rudd",
+  "private": true,
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.25",
+    "aws-lambda": "^0.1.2"
+  }
+}

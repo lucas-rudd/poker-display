@@ -1,0 +1,3 @@
+{
+  "body": "{\"id\":\"1234\",\"fistName\":\"firstName\",\"lastName\":\"lastName\",\"winnings\":0,\"image\":\"base64EncodedImage\",\"country\":\"N/A\"}"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@poker-api-utils/webpack",
+  "description": "A base configuration for using serverless-webpack with typescript",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Lucas Rudd",
+  "main": "./src/index.js",
+  "devDependencies": {
+    "ts-loader": "5.3.0",
+    "webpack": "4.25.1"
+  },
+  "peerDependencies": {
+    "serverless-webpack": "~5.1.1"
+  }
+}

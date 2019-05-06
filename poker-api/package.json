@@ -1,0 +1,49 @@
+{
+  "name": "poker-api",
+  "version": "1.0.0",
+  "description": "Serverless webpack example using Typescript",
+  "author": "Lucas Rudd",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "test": "lerna run test",
+    "typecheck": "lerna run typecheck",
+    "lint": "lerna run lint",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,ts,tsx,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.25",
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/convict": "4.2.1",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "8.0.57",
+    "@types/sinon": "^7.0.11",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "lerna": "3.13.4",
+    "lint-staged": "8.1.5",
+    "mocha": "6.1.4",
+    "nyc": "14.0.0",
+    "prettier": "1.17.0",
+    "serverless-kms-secrets": "1.0.4",
+    "serverless-offline": "4.9.4",
+    "serverless-webpack": "5.1.1",
+    "sinon": "7.3.2",
+    "tslint": "5.16.0",
+    "typescript": "2.8.4",
+    "webpack-merge": "4.2.1"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "services/*"
+    ]
+  }
+}

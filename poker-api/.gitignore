@@ -1,0 +1,17 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# Webpack directories
+.webpack
+
+# debug files
+lerna-debug.log
+yarn-error.log
+
+# coverage
+.nyc_output
+coverage

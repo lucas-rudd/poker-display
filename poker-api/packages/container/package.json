@@ -1,0 +1,30 @@
+{
+  "name": "@poker-api/container",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "tslint --project . --format stylish",
+    "test": "nyc --cache mocha --colors",
+    "test:watch": "mocha --watch --inspect",
+    "typecheck": "$(yarn bin)/tsc --noEmit"
+  },
+  "dependencies": {
+    "inversify": "5.0.1",
+    "reflect-metadata": "0.1.13"
+  },
+  "devDependencies": {
+    "typescript": "2.5.2"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "exclude": [
+      "**/index.ts",
+      "**/*.test.ts"
+    ]
+  }
+}

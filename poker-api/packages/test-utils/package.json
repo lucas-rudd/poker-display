@@ -1,0 +1,14 @@
+{
+  "name": "@poker-api-utils/test-utils",
+  "version": "1.0.0",
+  "description": "Utilities to assist with testing",
+  "author": "Lucas Rudd",
+  "private": true,
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.25",
+    "@types/faker": "^4.1.5",
+    "aws-lambda": "^0.1.2",
+    "faker": "^4.1.0",
+    "sinon": "^7.3.2"
+  }
+}
