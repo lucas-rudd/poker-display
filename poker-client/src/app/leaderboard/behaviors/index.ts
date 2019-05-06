@@ -3,16 +3,16 @@ import { compose, lifecycle, withProps } from 'recompose';
 
 const formatWinnings = (winnings) => {
     if(winnings >= 1000000000) {
-        return `$${winnings / 1000000000}B`;
+        return `$${(winnings / 1000000000).toFixed(1)}B`;
     }
     if(winnings >= 1000000) {
-        return `$${winnings / 1000000}M`;
+        return `$${(winnings / 1000000).toFixed(1)}M`;
     }
     if(winnings >= 1000) {
-        return `$${winnings / 1000}K`
+        return `$${(winnings / 1000).toFixed(1)}K`
     }
-    return `${winnings}`
-}
+    return `$${winnings.toFixed(1)}`
+};
 
 export const enhance = compose(
     withProps({

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactCountryFlag from 'react-country-flag';
 import CountryData from 'country-data'
 import { PokerPlayerName } from './styles';
 
@@ -27,7 +26,6 @@ export const PokerPlayer: React.FC<{id, firstName, lastName, winnings, image, co
                         {hasCountry(country) ? CountryData.countries[countryCode].name : ''}
                     </div>
                 </div>
-
             </td>
         </React.Fragment>
     )

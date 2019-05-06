@@ -12,27 +12,28 @@ const renderPokerPlayers = (pokerPlayers) => {
             </tr>
         );
     })
-}
+};
 
-const PokerPlayerContainer: React.FC<{pokerPlayers, fetching?, error?}> = enhance(({fetching = false, error = {}, pokerPlayers}) => {
-    const tableBody = fetching ? (<img src={logo} className="app-logo" alt="logo" />) : renderPokerPlayers(pokerPlayers);
-        return (
-            <div className="scroller">
-                <PokerPlayerTable className="poker-player-table">
-                    <PokerPlayerTableCaption>ALL-TIME TOURNAMENT EARNINGS</PokerPlayerTableCaption>
-                    <thead className="poker-player-header">
-                        <tr className="poker-player-table-row">
-                            <th scope="col">Player</th>
-                            <th scope="col">Winnings</th>
-                            <th scope="col">Native Of</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {tableBody}
-                    </tbody>
-                </PokerPlayerTable>
-            </div>
-        );
-    });
+export const PokerPlayerContainer: React.FC<{pokerPlayers, fetching?, error?}> = ({fetching = false, error = {}, pokerPlayers}) => {
+    const tableBody = fetching ? (
+        <td colSpan={3}><img src={logo} className="app-logo" alt="logo"/></td>) : renderPokerPlayers(pokerPlayers);
+    return (
+        <div className="scroller">
+            <PokerPlayerTable className="poker-player-table">
+                <PokerPlayerTableCaption>ALL-TIME TOURNAMENT EARNINGS</PokerPlayerTableCaption>
+                <thead className="poker-player-header">
+                <tr className="poker-player-table-row">
+                    <th scope="col">Player</th>
+                    <th scope="col">Winnings</th>
+                    <th scope="col">Native Of</th>
+                </tr>
+                </thead>
+                <tbody>
+                {tableBody}
+                </tbody>
+            </PokerPlayerTable>
+        </div>
+    );
+};
 
-export const PokerPlayerLeaderboard = PokerPlayerContainer;
+export const PokerPlayerLeaderboard = enhance(PokerPlayerContainer);
