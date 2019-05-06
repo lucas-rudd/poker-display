@@ -1,0 +1,311 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PokerPlayer when no image winnings 1`] = `
+Array [
+  <th
+    scope="row"
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <img
+        height="48px"
+        src="base64EncodedImage"
+        width="48px"
+      />
+      <div
+        className="sc-bdVaJa hniAuI"
+      >
+        firstName
+         
+        lastName
+      </div>
+    </div>
+  </th>,
+  <td>
+    1000
+  </td>,
+  <td>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "fontSize": "150%",
+          }
+        }
+      >
+        
+      </span>
+      <div
+        style={
+          Object {
+            "paddingLeft": "10px",
+          }
+        }
+      >
+        Ascension Island
+      </div>
+    </div>
+  </td>,
+]
+`;
+
+exports[`renders PokerPlayer with B winnings 1`] = `
+Array [
+  <th
+    scope="row"
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <img
+        height="48px"
+        src="base64EncodedImage"
+        width="48px"
+      />
+      <div
+        className="sc-bdVaJa hniAuI"
+      >
+        firstName
+         
+        lastName
+      </div>
+    </div>
+  </th>,
+  <td>
+    1000000000
+  </td>,
+  <td>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "fontSize": "150%",
+          }
+        }
+      >
+        
+      </span>
+      <div
+        style={
+          Object {
+            "paddingLeft": "10px",
+          }
+        }
+      >
+        
+      </div>
+    </div>
+  </td>,
+]
+`;
+
+exports[`renders PokerPlayer with K winnings 1`] = `
+Array [
+  <th
+    scope="row"
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <img
+        height="48px"
+        src="base64EncodedImage"
+        width="48px"
+      />
+      <div
+        className="sc-bdVaJa hniAuI"
+      >
+        firstName
+         
+        lastName
+      </div>
+    </div>
+  </th>,
+  <td>
+    1000
+  </td>,
+  <td>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "fontSize": "150%",
+          }
+        }
+      >
+        
+      </span>
+      <div
+        style={
+          Object {
+            "paddingLeft": "10px",
+          }
+        }
+      >
+        
+      </div>
+    </div>
+  </td>,
+]
+`;
+
+exports[`renders PokerPlayer with M winnings 1`] = `
+Array [
+  <th
+    scope="row"
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <img
+        height="48px"
+        src="base64EncodedImage"
+        width="48px"
+      />
+      <div
+        className="sc-bdVaJa hniAuI"
+      >
+        firstName
+         
+        lastName
+      </div>
+    </div>
+  </th>,
+  <td>
+    1000000
+  </td>,
+  <td>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "fontSize": "150%",
+          }
+        }
+      >
+        
+      </span>
+      <div
+        style={
+          Object {
+            "paddingLeft": "10px",
+          }
+        }
+      >
+        
+      </div>
+    </div>
+  </td>,
+]
+`;
+
+exports[`renders without crashing 1`] = `
+Array [
+  <th
+    scope="row"
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <img
+        height="48px"
+        src="base64EncodedImage"
+        width="48px"
+      />
+      <div
+        className="sc-bdVaJa hniAuI"
+      >
+        firstName
+         
+        lastName
+      </div>
+    </div>
+  </th>,
+  <td>
+    0
+  </td>,
+  <td>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "fontSize": "150%",
+          }
+        }
+      >
+        
+      </span>
+      <div
+        style={
+          Object {
+            "paddingLeft": "10px",
+          }
+        }
+      >
+        
+      </div>
+    </div>
+  </td>,
+]
+`;

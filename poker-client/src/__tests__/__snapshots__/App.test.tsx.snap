@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="app"
+>
+  <header
+    className="app-header"
+  >
+    <div
+      className="scroller"
+    >
+      <table
+        className="poker-player-table sc-bwzfXH hCaaRj"
+      >
+        <caption
+          className="sc-htpNat gWngkR"
+        >
+          ALL-TIME TOURNAMENT EARNINGS
+        </caption>
+        <thead
+          className="poker-player-header"
+        >
+          <tr
+            className="poker-player-table-row"
+          >
+            <th
+              scope="col"
+            >
+              Player
+            </th>
+            <th
+              scope="col"
+            >
+              Winnings
+            </th>
+            <th
+              scope="col"
+            >
+              Native Of
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <td
+            colSpan={3}
+          >
+            <img
+              alt="logo"
+              className="app-logo"
+              src="logo.svg"
+            />
+          </td>
+        </tbody>
+      </table>
+    </div>
+  </header>
+</div>
+`;

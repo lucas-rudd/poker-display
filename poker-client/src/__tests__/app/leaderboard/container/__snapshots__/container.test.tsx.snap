@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders table when pokerPlayer data and not fetching 1`] = `
+<div
+  className="scroller"
+>
+  <table
+    className="poker-player-table sc-bwzfXH hCaaRj"
+  >
+    <caption
+      className="sc-htpNat gWngkR"
+    >
+      ALL-TIME TOURNAMENT EARNINGS
+    </caption>
+    <thead
+      className="poker-player-header"
+    >
+      <tr
+        className="poker-player-table-row"
+      >
+        <th
+          scope="col"
+        >
+          Player
+        </th>
+        <th
+          scope="col"
+        >
+          Winnings
+        </th>
+        <th
+          scope="col"
+        >
+          Native Of
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="poker-player-table-row"
+      >
+        <th
+          scope="row"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+          >
+            <img
+              height="48px"
+              src="base64EncodedImage"
+              width="48px"
+            />
+            <div
+              className="sc-bdVaJa hniAuI"
+            >
+              firstName
+               
+              lastName
+            </div>
+          </div>
+        </th>
+        <td>
+          100
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "fontSize": "150%",
+                }
+              }
+            >
+              
+            </span>
+            <div
+              style={
+                Object {
+                  "paddingLeft": "10px",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`renders without crashing 1`] = `
+<div
+  className="scroller"
+>
+  <table
+    className="poker-player-table sc-bwzfXH hCaaRj"
+  >
+    <caption
+      className="sc-htpNat gWngkR"
+    >
+      ALL-TIME TOURNAMENT EARNINGS
+    </caption>
+    <thead
+      className="poker-player-header"
+    >
+      <tr
+        className="poker-player-table-row"
+      >
+        <th
+          scope="col"
+        >
+          Player
+        </th>
+        <th
+          scope="col"
+        >
+          Winnings
+        </th>
+        <th
+          scope="col"
+        >
+          Native Of
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <td
+        colSpan={3}
+      >
+        <img
+          alt="logo"
+          className="app-logo"
+          src="logo.svg"
+        />
+      </td>
+    </tbody>
+  </table>
+</div>
+`;
