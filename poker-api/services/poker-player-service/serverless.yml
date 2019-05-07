@@ -17,6 +17,9 @@ provider:
   name: aws
   timeout: 10
   runtime: nodejs8.10
+  environment:
+    SERVICE_NAME: poker-player-service
+    NODE_ENV: ${opt:stage}
 
 functions:
   get-poker-players: ${file(config/functions/poker-player.yml):get}
