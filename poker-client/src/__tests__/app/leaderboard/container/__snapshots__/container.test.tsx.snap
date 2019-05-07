@@ -5,10 +5,10 @@ exports[`renders table when pokerPlayer data and not fetching 1`] = `
   className="scroller"
 >
   <table
-    className="poker-player-table sc-bwzfXH hCaaRj"
+    className="poker-player-table sc-htpNat byocSh"
   >
     <caption
-      className="sc-htpNat gWngkR"
+      className="sc-bxivhb duXjEx"
     >
       ALL-TIME TOURNAMENT EARNINGS
     </caption>
@@ -43,12 +43,7 @@ exports[`renders table when pokerPlayer data and not fetching 1`] = `
           scope="row"
         >
           <div
-            style={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-              }
-            }
+            className="sc-bwzfXH bNgKhd"
           >
             <img
               height="48px"
@@ -65,35 +60,13 @@ exports[`renders table when pokerPlayer data and not fetching 1`] = `
           </div>
         </th>
         <td>
-          100
+          $100.0
         </td>
         <td>
           <div
-            style={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-              }
-            }
+            className="sc-bwzfXH bNgKhd"
           >
-            <span
-              style={
-                Object {
-                  "fontSize": "150%",
-                }
-              }
-            >
-              
-            </span>
-            <div
-              style={
-                Object {
-                  "paddingLeft": "10px",
-                }
-              }
-            >
-              
-            </div>
+            Country Not Available
           </div>
         </td>
       </tr>
@@ -107,10 +80,10 @@ exports[`renders without crashing 1`] = `
   className="scroller"
 >
   <table
-    className="poker-player-table sc-bwzfXH hCaaRj"
+    className="poker-player-table sc-htpNat byocSh"
   >
     <caption
-      className="sc-htpNat gWngkR"
+      className="sc-bxivhb duXjEx"
     >
       ALL-TIME TOURNAMENT EARNINGS
     </caption>

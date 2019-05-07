@@ -6,12 +6,7 @@ Array [
     scope="row"
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
       <img
         height="48px"
@@ -28,35 +23,13 @@ Array [
     </div>
   </th>,
   <td>
-    1000
+    $1.0K
   </td>,
   <td>
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
-      <span
-        style={
-          Object {
-            "fontSize": "150%",
-          }
-        }
-      >
-        
-      </span>
-      <div
-        style={
-          Object {
-            "paddingLeft": "10px",
-          }
-        }
-      >
-        Ascension Island
-      </div>
+      Country Not Available
     </div>
   </td>,
 ]
@@ -68,12 +41,7 @@ Array [
     scope="row"
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
       <img
         height="48px"
@@ -90,35 +58,13 @@ Array [
     </div>
   </th>,
   <td>
-    1000000000
+    $1.0B
   </td>,
   <td>
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
-      <span
-        style={
-          Object {
-            "fontSize": "150%",
-          }
-        }
-      >
-        
-      </span>
-      <div
-        style={
-          Object {
-            "paddingLeft": "10px",
-          }
-        }
-      >
-        
-      </div>
+      Country Not Available
     </div>
   </td>,
 ]
@@ -130,12 +76,7 @@ Array [
     scope="row"
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
       <img
         height="48px"
@@ -152,35 +93,13 @@ Array [
     </div>
   </th>,
   <td>
-    1000
+    $1.0K
   </td>,
   <td>
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
-      <span
-        style={
-          Object {
-            "fontSize": "150%",
-          }
-        }
-      >
-        
-      </span>
-      <div
-        style={
-          Object {
-            "paddingLeft": "10px",
-          }
-        }
-      >
-        
-      </div>
+      Country Not Available
     </div>
   </td>,
 ]
@@ -192,12 +111,7 @@ Array [
     scope="row"
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
       <img
         height="48px"
@@ -214,35 +128,13 @@ Array [
     </div>
   </th>,
   <td>
-    1000000
+    $1.0M
   </td>,
   <td>
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
-      <span
-        style={
-          Object {
-            "fontSize": "150%",
-          }
-        }
-      >
-        
-      </span>
-      <div
-        style={
-          Object {
-            "paddingLeft": "10px",
-          }
-        }
-      >
-        
-      </div>
+      Country Not Available
     </div>
   </td>,
 ]
@@ -254,12 +146,7 @@ Array [
     scope="row"
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
       <img
         height="48px"
@@ -276,35 +163,13 @@ Array [
     </div>
   </th>,
   <td>
-    0
+    $0.0
   </td>,
   <td>
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
+      className="sc-bwzfXH bNgKhd"
     >
-      <span
-        style={
-          Object {
-            "fontSize": "150%",
-          }
-        }
-      >
-        
-      </span>
-      <div
-        style={
-          Object {
-            "paddingLeft": "10px",
-          }
-        }
-      >
-        
-      </div>
+      Country Not Available
     </div>
   </td>,
 ]

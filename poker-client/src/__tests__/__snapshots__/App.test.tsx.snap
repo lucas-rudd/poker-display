@@ -11,10 +11,10 @@ exports[`renders without crashing 1`] = `
       className="scroller"
     >
       <table
-        className="poker-player-table sc-bwzfXH hCaaRj"
+        className="poker-player-table sc-htpNat byocSh"
       >
         <caption
-          className="sc-htpNat gWngkR"
+          className="sc-bxivhb duXjEx"
         >
           ALL-TIME TOURNAMENT EARNINGS
         </caption>
