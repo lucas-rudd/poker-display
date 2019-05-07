@@ -1,4 +1,3 @@
-tableName: poker-players-dev
 vpc:
   securityGroupIds:
     - sg-82a30cf2

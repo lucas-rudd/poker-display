@@ -1,5 +1,6 @@
 import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';
+import { describe, it, beforeEach, afterEach } from 'mocha';
 import { injectable } from 'inversify';
 
 import { BaseContainer } from '../../src';

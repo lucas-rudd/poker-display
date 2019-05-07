@@ -18,15 +18,17 @@ export class MongoDBConnection {
          * this is due to the fact that I have saved the cert in a ts file instead
          * of a pem file to reduce overhead in webpack transpilation.
          **/
-        // @ts-ignore-start
-        return await connect(connectionUrl, { sslCA: rdsCert, sslValidate: true, useNewUrlParser: false }).then((db: Mongoose) => {
+        return await connect(
+            connectionUrl,
+            // @ts-ignore
+            { sslCA: rdsCert, sslValidate: true, useNewUrlParser: false }
+        ).then((db: Mongoose) => {
             this.dbInstance = db;
         });
-        // @ts-ignore-end
     }
 
     public async getDbInstance() {
-        if(!this.dbInstance) {
+        if (!this.dbInstance) {
             await this.connect();
         }
         return this.dbInstance;

@@ -15,8 +15,10 @@ custom:
 
 provider:
   name: aws
+  timeout: 10
   runtime: nodejs8.10
 
 functions:
   get-poker-players: ${file(config/functions/poker-player.yml):get}
   put-poker-player: ${file(config/functions/poker-player.yml):put}
+  delete-poker-player: ${file(config/functions/poker-player.yml):delete}

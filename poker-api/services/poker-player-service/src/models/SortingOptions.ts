@@ -1,6 +1,4 @@
 export interface SortingOptions {
     sortField?: string;
-    order?: SortingOrder
+    order?: string;
 }
-
-export type SortingOrder = 'asc'| 'desc'|'ascending'|'descending'|1|-1|'';

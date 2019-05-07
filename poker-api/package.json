@@ -11,6 +11,11 @@
     "lint": "lerna run lint",
     "precommit": "lint-staged"
   },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "tabWidth": 4
+  },
   "lint-staged": {
     "*.{js,jsx,json,ts,tsx,css,scss}": [
       "prettier --write",

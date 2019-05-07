@@ -12,32 +12,29 @@ get:
 put:
     handler: src/handler/PokerPlayerHandler.putPokerPlayer
     environment:
-          ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
+        ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
     events:
     - http:
         method: put
         path: poker-player
         cors: true
-    vpc: ${file(config/env/${opt:stage}.yml):vpc}
-
-post:
-    handler: src/handler/PokerPlayerHandler.putPokerPlayer
-    environment:
-          ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
-    events:
     - http:
         method: post
         path: poker-player
         cors: true
-    vpc: ${file(config/env/${opt:stage}.yml):vpc}
-
-patch:
-    handler: src/handler/PokerPlayerHandler.putPokerPlayer
-    environment:
-          ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
-    events:
     - http:
         method: patch
+        path: poker-player
+        cors: true
+    vpc: ${file(config/env/${opt:stage}.yml):vpc}
+
+delete:
+    handler: src/handler/PokerPlayerHandler.deletePokerPlayer
+    environment:
+        ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
+    events:
+    - http:
+        method: delete
         path: poker-player
         cors: true
     vpc: ${file(config/env/${opt:stage}.yml):vpc}

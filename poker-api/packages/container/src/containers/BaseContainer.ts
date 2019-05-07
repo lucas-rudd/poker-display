@@ -8,7 +8,6 @@ const defaultContainerOptions: interfaces.ContainerOptions = {
 };
 
 export class BaseContainer extends InversifyContainer {
-
     constructor(containerOptions?: interfaces.ContainerOptions) {
         super(containerOptions || defaultContainerOptions);
     }

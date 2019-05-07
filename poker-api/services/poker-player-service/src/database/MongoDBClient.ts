@@ -3,7 +3,6 @@ import { MongoDBConnection } from './MongoDBConnection';
 
 @injectable()
 export class MongoDBClient {
-
     constructor(private readonly connection: MongoDBConnection) {}
 
     public async init() {
@@ -13,6 +12,4 @@ export class MongoDBClient {
     public async getDbInstance() {
         return await this.connection.getDbInstance();
     }
-
-
 }

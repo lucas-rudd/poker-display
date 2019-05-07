@@ -1,14 +1,13 @@
 import * as sinon from 'sinon';
 import * as chai from 'chai';
+import { describe, it, beforeEach, afterEach } from 'mocha';
 import * as chaiAsPromised from 'chai-as-promised';
 
 import { BaseContainer, useContainer, getContainer, resolve } from '../../src';
 
 chai.use(chaiAsPromised);
 
-class TestDependency {
-
-}
+class TestDependency {}
 
 describe('linkContainer', () => {
     let sandbox: sinon.SinonSandbox;
