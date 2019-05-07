@@ -2,7 +2,7 @@ import React from 'react';
 import { PokerPlayer } from '../poker-player';
 import { PokerPlayerTable, PokerPlayerTableCaption } from './styles';
 import logo from '../../logo.svg';
-import { enhance } from '../behaviors';
+import { enhance } from './behaviors';
 
 const renderPokerPlayers = (pokerPlayers) => {
     return pokerPlayers.map(({_id, firstName, lastName, image, winnings, country}) => {
