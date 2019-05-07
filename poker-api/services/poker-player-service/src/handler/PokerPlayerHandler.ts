@@ -4,6 +4,7 @@ import { APIGatewayEvent, Context, Handler, Callback } from 'aws-lambda';
 import { PokerPlayerService } from '../service';
 import { SortingOptions } from '../models';
 import { IPokerPlayer } from '../models/PokerPlayer';
+import {QueryOptions} from "../models/QueryOptions";
 
 class PokerPlayerHandler extends RestHandler {
     constructor(e: APIGatewayEvent, ctx: Context, cb: Callback) {
@@ -13,17 +14,32 @@ class PokerPlayerHandler extends RestHandler {
 
     public async getPokerPlayers(): Promise<void> {
         const sortingOptions: SortingOptions = this.getQueryStringParameters();
+        const queryOptions: QueryOptions = this.getQueryStringParameters();
         let sortQuery = {} as SortingOptions;
+        let findQuery = {} as QueryOptions;
         if (sortingOptions && sortingOptions.order && sortingOptions.sortField) {
             sortQuery = sortingOptions;
         }
+        if (queryOptions && queryOptions.query && queryOptions.queryField) {
+            findQuery = queryOptions;
+        }
         try {
-            const pokerPlayers = await this.pokerPlayerService.getPokerPlayers(sortQuery);
+            const pokerPlayers = await this.pokerPlayerService.getPokerPlayers(findQuery, sortQuery);
             this.ok(pokerPlayers);
         } catch (e) {
             this.error(e);
         }
     }
+
+    // public async getPokerPlayer(): Promise<void> {
+    //     try {
+    //         const { id } = this.getPathParameters();
+    //         const pokerPlayer: IPokerPlayer = await this.pokerPlayerService.getPokerPlayer(id);
+    //         this.ok(pokerPlayer);
+    //     } catch (e) {
+    //         this.error(e);
+    //     }
+    // }
 
     public async putPokerPlayer(): Promise<void> {
         try {

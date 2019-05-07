@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { MongoDBClient } from '../database';
-import { PokerPlayer, SortingOptions, IPokerPlayer } from '../models';
+import { PokerPlayer, SortingOptions, IPokerPlayer, QueryOptions } from '../models';
 import { injectable } from 'inversify';
 
 @injectable()
@@ -8,14 +8,16 @@ export class PokerPlayerService {
     constructor(private readonly db: MongoDBClient) {}
 
     public async getPokerPlayers(
+        queryOptions: QueryOptions = { queryField: '', query: ''},
         sortingOptions: SortingOptions = { sortField: '', order: '' }
     ): Promise<IPokerPlayer[]> {
         const { sortField, order } = sortingOptions;
+        const { queryField, query } = queryOptions;
         try {
             console.log('initalizing database');
             await this.db.init();
             console.log('finding poker player');
-            return await PokerPlayer.find().sort({ [<string>sortField]: order });
+            return await PokerPlayer.find({[<string> queryField]: query }).sort({ [<string>sortField]: order });
         } catch (err) {
             console.log(err);
             throw err;
