@@ -6,4 +6,4 @@ Deployment to your AWS account can be done by first ensuring your account `AWS_A
 
 Each service must define its own `serverless.yml` file. In this file, the AWS lambda functions which you want to deploy are defined.
  
-To deploy your service, run `sls deploy --stage dev` in your service directory.
+To deploy your service, run `yarn run deploy` or  `sls deploy --stage dev` in your service directory.

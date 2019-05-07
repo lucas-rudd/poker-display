@@ -8,6 +8,8 @@
   "scripts": {
     "typecheck": "$(yarn bin)/tsc --noEmit",
     "test": "nyc --cache mocha --colors",
+    "deploy": "$(yarn bin)/sls deploy --stage dev",
+    "offline": "$(yarn bin)/sls offline --stage local",
     "lint": "tslint --project . --format stylish"
   },
   "dependencies": {
@@ -31,6 +33,7 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "mocha": "^6.1.4",
+    "serverless": "^1.41.1",
     "typescript": "2.8.4"
   },
   "nyc": {

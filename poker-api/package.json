@@ -37,6 +37,7 @@
     "mocha": "6.1.4",
     "nyc": "14.0.0",
     "prettier": "1.17.0",
+    "serverless": "^1.41.1",
     "serverless-kms-secrets": "1.0.4",
     "serverless-offline": "4.9.4",
     "serverless-webpack": "5.1.1",
