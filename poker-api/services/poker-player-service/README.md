@@ -12,6 +12,15 @@ Query string parameters can be used to sort the data by particular elements.
 For example, the following request would sort all players by winnings in descending order
 `/poker-players?sortField=winnings&order=desc`
 
+
+This endpoint is also used to obtain a single user as well. You can do that by sending the query and queryField as query string parameters like so.
+`/poker-players?queryField=_id&query=5ccde0495b74b1a46b46642b`
+
+Combining these can allow you to sort all users that match a given query criteria.
+
+For example, sending a request with the following query string parameters will return all users named `Greg` and sort them in descending order by last name.
+`/poker-players?queryField=firstName&query=Gred&sortField=lastName&order=desc`
+
 # PUT/POST/PATCH
 Creating a new poker player, or updating an existing poker-player can be done by invoking the `/poker-player` path
 
