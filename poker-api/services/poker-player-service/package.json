@@ -21,7 +21,7 @@
     "aws-lambda": "0.1.2",
     "convict": "4.4.1",
     "inversify": "5.0.1",
-    "mongoose": "5.5.5",
+    "mongoose": "5.7.5",
     "reflect-metadata": "0.1.13",
     "tsoa": "^2.5.13",
     "tsoa-serverless": "^1.0.0"
