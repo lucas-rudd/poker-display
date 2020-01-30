@@ -1,39 +1,36 @@
-import { APIGatewayEvent, Callback, Context, ProxyResult } from 'aws-lambda';
+import { APIGatewayEvent, Callback, Context, APIGatewayProxyResult } from 'aws-lambda';
 
 export abstract class RestHandler {
-    protected e: APIGatewayEvent;
-    protected ctx: Context;
-    protected cb: Callback;
-    private defaultHeaders: {} = {
+    private readonly defaultHeaders: {} = {
         'Access-Control-Allow-Headers': 'X-Requested-With, X-Api-Client, X-Api-Client-version',
         'Access-Control-Allow-Methods': '*',
         'Access-Control-Allow-Origin': '*'
     };
 
-    constructor(e: APIGatewayEvent, ctx: Context, cb: Callback) {
-        this.e = e;
-        this.ctx = ctx;
-        this.cb = cb;
+    constructor(
+        protected readonly e: APIGatewayEvent,
+        protected readonly ctx: Context,
+        protected readonly cb?: Callback
+    ) {}
+
+    protected ok<T>(body?: T, headers?: object): APIGatewayProxyResult {
+        return this.respond(200, body, headers);
     }
 
-    protected ok(body?: {}): void {
-        this.cb(null, this.respond(200, body));
+    protected created<T>(body: T, headers?: object): APIGatewayProxyResult {
+        return this.respond(201, body, headers);
     }
 
-    protected created(body: {}): void {
-        this.cb(null, this.respond(201, body));
+    protected accepted<T>(body?: T, headers?: object): APIGatewayProxyResult {
+        return this.respond(202, body, headers);
     }
 
-    protected accepted(body?: {}): void {
-        this.cb(null, this.respond(202, body));
+    protected notFound(error: Error, headers?: object): APIGatewayProxyResult {
+        return this.respond(404, { error: error.message }, headers);
     }
 
-    protected notFound(error: Error): void {
-        this.cb(null, this.respond(404, { error: error.message }));
-    }
-
-    protected error(error: Error): void {
-        this.cb(null, this.respond(500, { error: error.message }));
+    protected error(error: Error, headers?: object): APIGatewayProxyResult {
+        return this.respond(500, { error: error.message }, headers);
     }
 
     protected getBody<T>(): T {
@@ -69,10 +66,10 @@ export abstract class RestHandler {
         return queryStringParameters as T;
     }
 
-    protected respond(statusCode: number, body?: {}): ProxyResult {
+    protected respond<T>(statusCode: number, body?: T, headers?: object): APIGatewayProxyResult {
         return {
             statusCode,
-            headers: this.defaultHeaders,
+            headers: { ...this.defaultHeaders, ...headers },
             body: JSON.stringify(body)
         };
     }

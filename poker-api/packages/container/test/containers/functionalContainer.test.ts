@@ -1,7 +1,7 @@
 import * as sinon from 'sinon';
 import * as chai from 'chai';
 import { describe, it, beforeEach, afterEach } from 'mocha';
-import * as chaiAsPromised from 'chai-as-promised';
+import chaiAsPromised from 'chai-as-promised';
 
 import { BaseContainer, useContainer, getContainer, resolve } from '../../src';
 
@@ -11,7 +11,7 @@ class TestDependency {}
 
 describe('linkContainer', () => {
     let sandbox: sinon.SinonSandbox;
-    let containerInstance;
+    let containerInstance: BaseContainer;
 
     beforeEach(() => {
         sandbox = sinon.createSandbox();

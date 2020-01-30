@@ -13,6 +13,6 @@ export const MockContext: Context = {
     logStreamName: faker.random.alphaNumeric(),
     getRemainingTimeInMillis: sinon.stub(),
     done: sinon.stub(),
-    succeed: sinon.stub(),
+    succeed: sinon.stub() as (messageOrObject: any) => void,
     fail: sinon.stub()
 };

@@ -3,8 +3,7 @@ import { Container as InversifyContainer, interfaces } from 'inversify';
 
 const defaultContainerOptions: interfaces.ContainerOptions = {
     autoBindInjectable: true,
-    defaultScope: 'Singleton',
-    skipBaseClassChecks: true
+    defaultScope: 'Singleton'
 };
 
 export class BaseContainer extends InversifyContainer {
