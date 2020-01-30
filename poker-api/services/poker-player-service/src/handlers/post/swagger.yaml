@@ -1,0 +1,13 @@
+methodResponses:
+  - statusCode: '200'
+    responseBody:
+      description: Ok
+    responseModels:
+      application/json: IPokerPlayer
+  - statusCode: '201'
+    responseBody:
+      description: Poker player created
+    responseModels:
+      application/json: IPokerPlayer
+requestModels:
+  application/json: IPokerPlayer

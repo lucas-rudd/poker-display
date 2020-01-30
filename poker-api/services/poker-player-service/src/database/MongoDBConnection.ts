@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { connect, Mongoose } from 'mongoose';
+import { connect as mongooseConnect, Mongoose, ConnectionOptions } from 'mongoose';
 import { MongoDBConnectionConfiguration } from '../config';
 import { injectable } from 'inversify';
 import { rdsCert } from '../certs';
@@ -18,10 +18,10 @@ export class MongoDBConnection {
          * this is due to the fact that I have saved the cert in a ts file instead
          * of a pem file to reduce overhead in webpack transpilation.
          **/
-        return await connect(
+        return await mongooseConnect(
             connectionUrl,
             // @ts-ignore
-            { sslCA: rdsCert, sslValidate: true, useNewUrlParser: false }
+            { sslCA: rdsCert, sslValidate: true, useNewUrlParser: false } as ConnectionOptions
         ).then((db: Mongoose) => {
             this.dbInstance = db;
         });

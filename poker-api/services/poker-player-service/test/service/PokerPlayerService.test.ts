@@ -1,8 +1,6 @@
-import { Context } from 'aws-lambda';
 import * as chai from 'chai';
-import * as chaiAsPromised from 'chai-as-promised';
+import chaiAsPromised from 'chai-as-promised';
 import * as sinon from 'sinon';
-import { Model } from 'mongoose';
 import { describe, it, beforeEach, afterEach } from 'mocha';
 import { resolve } from '@poker-api/container';
 import { PokerPlayerService, MongoDBClient, PokerPlayer, SortingOptions, IPokerPlayer } from '../../src';
@@ -19,7 +17,6 @@ describe('PokerPlayerService', () => {
     let sandbox: sinon.SinonSandbox;
     let pokerPlayerService: PokerPlayerService;
     let pokerPlayerModelStub: sinon.SinonStub;
-    let databaseStub: sinon.SinonStub;
 
     beforeEach(() => {
         pokerPlayerService = new PokerPlayerService(resolve(MongoDBClient));
@@ -28,7 +25,7 @@ describe('PokerPlayerService', () => {
 
     describe('Database initalization error', () => {
         beforeEach(() => {
-            databaseStub = sandbox.stub(MongoDBClient.prototype, 'init').rejects(dbError);
+            sandbox.stub(MongoDBClient.prototype, 'init').rejects(dbError);
         });
 
         afterEach(() => {
@@ -75,9 +72,9 @@ describe('PokerPlayerService', () => {
             pokerPlayerModelStub = sandbox.stub(PokerPlayer, 'find').callsFake(() => {
                 return {
                     sort: pokerPlayerSortStub
-                };
+                } as any;
             });
-            databaseStub = sandbox.stub(MongoDBClient.prototype, 'init').resolves();
+            sandbox.stub(MongoDBClient.prototype, 'init').resolves();
         });
 
         afterEach(() => {
@@ -101,7 +98,7 @@ describe('PokerPlayerService', () => {
                 order: 'asc',
                 sortField: 'test'
             };
-            const promise: Promise<{}> = pokerPlayerService.getPokerPlayers(sortingOptions);
+            const promise: Promise<{}> = pokerPlayerService.getPokerPlayers({}, sortingOptions);
 
             return chai.expect(promise).to.be.fulfilled.then(response => {
                 chai.expect(response).to.be.an('array');
@@ -114,12 +111,10 @@ describe('PokerPlayerService', () => {
     });
 
     describe('putPokerPlayer', () => {
-        let databaseStub: sinon.SinonStub;
-
         beforeEach(() => {
             pokerPlayerService = new PokerPlayerService(resolve(MongoDBClient));
             sandbox = sinon.createSandbox();
-            databaseStub = sandbox.stub(MongoDBClient.prototype, 'init').resolves();
+            sandbox.stub(MongoDBClient.prototype, 'init').resolves();
         });
 
         afterEach(() => {
@@ -149,12 +144,10 @@ describe('PokerPlayerService', () => {
     });
 
     describe('deletePokerPlayer', () => {
-        let databaseStub: sinon.SinonStub;
-
         beforeEach(() => {
             pokerPlayerService = new PokerPlayerService(resolve(MongoDBClient));
             sandbox = sinon.createSandbox();
-            databaseStub = sandbox.stub(MongoDBClient.prototype, 'init').resolves();
+            sandbox.stub(MongoDBClient.prototype, 'init').resolves();
         });
 
         afterEach(() => {

@@ -43,7 +43,7 @@
     "serverless-webpack": "5.1.1",
     "sinon": "7.3.2",
     "tslint": "5.16.0",
-    "typescript": "2.8.4",
+    "typescript": "3.6.2",
     "webpack-merge": "4.2.1"
   },
   "workspaces": {

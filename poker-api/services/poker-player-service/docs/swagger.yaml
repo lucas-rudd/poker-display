@@ -1,0 +1,119 @@
+components:
+  examples: {}
+  headers: {}
+  parameters: {}
+  requestBodies: {}
+  responses: {}
+  schemas:
+    IPokerPlayer:
+      properties:
+        _id:
+          type: string
+        fistName:
+          type: string
+        lastName:
+          type: string
+        winnings:
+          type: number
+          format: double
+        image:
+          type: string
+        country:
+          type: string
+      required:
+        - _id
+        - fistName
+        - lastName
+        - winnings
+        - image
+        - country
+      type: object
+      additionalProperties: true
+  securitySchemes: {}
+paths:
+  /poker-player:
+    put:
+      operationId: PutPokerPlayer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPokerPlayer'
+          description: Ok
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPokerPlayer'
+          description: Poker player created
+      security: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IPokerPlayer'
+    delete:
+      operationId: DeletePokerPlayer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPokerPlayer'
+          description: Ok
+      security: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IPokerPlayer'
+  /poker-players:
+    get:
+      operationId: GetPokerPlayers
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/IPokerPlayer'
+                type: array
+          description: Ok
+      security: []
+      parameters:
+        - in: query
+          name: sortField
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: order
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: queryField
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: query
+          required: false
+          schema:
+            type: string
+produces:
+  - application/json
+swagger: '2.0'
+securityDefinitions: {}
+basePath: /labels
+consumes:
+  - application/json
+info:
+  title: ''
+definitions: {}
+openapi: 3.0.0
+servers:
+  - url: 'https://localhost:3000/'

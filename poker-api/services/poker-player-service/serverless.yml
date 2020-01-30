@@ -3,12 +3,15 @@ service:
 
 plugins:
   - serverless-webpack
+  - serverless-aws-documentation
   - serverless-kms-secrets
   - serverless-offline
 
 custom:
   webpack:
       packager: yarn
+  documentation:
+      models: ${./docs/models.yaml}
   serverless-kms-secrets:
       secretsFile: config/env/secrets/${opt:stage, self:provider.stage}.yml
   secrets: ${file(config/env/secrets/${opt:stage, self:provider.stage}.yml):secrets}

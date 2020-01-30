@@ -1,6 +1,6 @@
-import * as convict from 'convict';
+import convict from 'convict';
 
-export const config: convict.Config<{}> = convict({
+export const config: convict.Config<any> = convict({
     env: {
         doc: 'API Environment',
         format: String,

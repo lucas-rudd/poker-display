@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 import { PokerPlayerMongooseSchema } from './schemas';
 
-export interface IPokerPlayer extends mongoose.Document {
+export interface IPokerPlayer {
     _id: string;
     fistName: string;
     lastName: string;
@@ -10,4 +10,6 @@ export interface IPokerPlayer extends mongoose.Document {
     country: string;
 }
 
-export const PokerPlayer = mongoose.model<IPokerPlayer>('PokerPlayer', PokerPlayerMongooseSchema);
+export type PokerPlayerDocument = mongoose.Document & IPokerPlayer;
+
+export const PokerPlayer = mongoose.model<PokerPlayerDocument>('PokerPlayer', PokerPlayerMongooseSchema);

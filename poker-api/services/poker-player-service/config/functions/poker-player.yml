@@ -1,40 +1,59 @@
 get:
-    handler: src/handler/PokerPlayerHandler.getPokerPlayers
+    handler: src/handlers/get/index.getPokerPlayers
     environment:
         ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
     events:
-    - http:
-        method: get
-        path: poker-players
-        cors: true
+        - http:
+              method: get
+              path: poker-players
+              cors: true
     vpc: ${file(config/env/${opt:stage}.yml):vpc}
+    documentation: ${./src/handlers/get/swagger.yaml}
 
 put:
-    handler: src/handler/PokerPlayerHandler.putPokerPlayer
+    handler: src/handlers/put/index.putPokerPlayer
     environment:
         ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
     events:
-    - http:
-        method: put
-        path: poker-player
-        cors: true
-    - http:
-        method: post
-        path: poker-player
-        cors: true
-    - http:
-        method: patch
-        path: poker-player
-        cors: true
+        - http:
+              method: put
+              path: poker-player
+              cors: true
+              documentation: ${./src/handlers/put/swagger.yaml}
+    vpc: ${file(config/env/${opt:stage}.yml):vpc}
+
+post:
+    handler: src/handlers/post/index.postPokerPlayer
+    environment:
+        ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
+    events:
+        - http:
+              method: post
+              path: poker-player
+              cors: true
+              documentation: ${./src/handlers/post/swagger.yaml}
+    vpc: ${file(config/env/${opt:stage}.yml):vpc}
+
+patch:
+    handler: src/handler/patch/index.patchPokerPlayer
+    environment:
+        ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
+    events:
+        - http:
+              method: patch
+              path: poker-player
+              cors: true
+              documentation: ${./src/handlers/patch/swagger.yaml}
     vpc: ${file(config/env/${opt:stage}.yml):vpc}
 
 delete:
-    handler: src/handler/PokerPlayerHandler.deletePokerPlayer
+    handler: src/handlers/delete/index.deletePokerPlayer
     environment:
         ENCRYPTED_DATABASE_CONNECTION: ${self:custom.secrets.ENCRYPTED_DATABASE_CONNECTION}
     events:
-    - http:
-        method: delete
-        path: poker-player
-        cors: true
+        - http:
+              method: delete
+              path: poker-player
+              cors: true
+              documentation: ${./src/handlers/delete/swagger.yaml}
     vpc: ${file(config/env/${opt:stage}.yml):vpc}

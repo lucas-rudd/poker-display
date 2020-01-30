@@ -10,7 +10,8 @@
     "test": "nyc --cache mocha --colors",
     "deploy": "$(yarn bin)/sls deploy --stage dev",
     "offline": "$(yarn bin)/sls offline --stage local",
-    "lint": "tslint --project . --format stylish"
+    "lint": "tslint --project . --format stylish",
+    "document": "$(yarn bin)/document --srcDir=src/handlers --outDir=./docs"
   },
   "dependencies": {
     "@poker-api/base-handlers": "*",
@@ -19,9 +20,11 @@
     "@types/mongoose": "5.3.27",
     "aws-lambda": "0.1.2",
     "convict": "4.4.1",
-    "inversify": "4.11.1",
+    "inversify": "5.0.1",
     "mongoose": "5.5.5",
-    "reflect-metadata": "0.1.13"
+    "reflect-metadata": "0.1.13",
+    "tsoa": "^2.5.13",
+    "tsoa-serverless": "^1.0.0"
   },
   "devDependencies": {
     "@poker-api-utils/test-utils": "*",
@@ -34,6 +37,7 @@
     "chai-as-promised": "^7.1.1",
     "mocha": "^6.1.4",
     "serverless": "^1.41.1",
+    "serverless-aws-documentation": "^1.1.0",
     "typescript": "2.8.4"
   },
   "nyc": {

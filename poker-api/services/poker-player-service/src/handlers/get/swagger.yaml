@@ -1,0 +1,11 @@
+methodResponses:
+  - statusCode: '200'
+    responseBody:
+      description: Ok
+    responseModels:
+      application/json: IPokerPlayer
+queryParams:
+  - name: sortField
+  - name: order
+  - name: queryField
+  - name: query

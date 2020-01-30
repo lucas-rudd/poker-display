@@ -1,0 +1,27 @@
+- name: IPokerPlayer
+  contentType: application/json
+  schema:
+    properties:
+      _id:
+        type: string
+      fistName:
+        type: string
+      lastName:
+        type: string
+      winnings:
+        type: number
+        format: double
+      image:
+        type: string
+      country:
+        type: string
+    required:
+      - _id
+      - fistName
+      - lastName
+      - winnings
+      - image
+      - country
+    type: object
+    additionalProperties: true
+  type: object
