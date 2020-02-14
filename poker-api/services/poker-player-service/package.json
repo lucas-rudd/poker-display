@@ -18,7 +18,7 @@
     "@poker-api/container": "*",
     "@types/aws-lambda": "8.10.25",
     "@types/mongoose": "5.3.27",
-    "aws-lambda": "0.1.2",
+    "aws-lambda": "1.0.5",
     "convict": "4.4.1",
     "inversify": "5.0.1",
     "mongoose": "5.5.5",

@@ -7,7 +7,7 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.25",
     "@types/faker": "^4.1.5",
-    "aws-lambda": "^0.1.2",
+    "aws-lambda": "^1.0.5",
     "faker": "^4.1.0",
     "sinon": "^7.3.2"
   }
