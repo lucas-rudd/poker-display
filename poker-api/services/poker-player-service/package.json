@@ -19,7 +19,7 @@
     "@types/aws-lambda": "8.10.25",
     "@types/mongoose": "5.3.27",
     "aws-lambda": "0.1.2",
-    "convict": "4.4.1",
+    "convict": "6.2.2",
     "inversify": "5.0.1",
     "mongoose": "5.5.5",
     "reflect-metadata": "0.1.13",
